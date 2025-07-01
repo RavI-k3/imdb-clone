@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Movies from "./components/Movies";
 import Banner from "./components/Banner";
 import WatchList from "./components/WatchList";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   const [count, setCount] = useState(0);
