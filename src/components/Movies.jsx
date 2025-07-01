@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Moviecard from "./Moviecard";
 import axios from "axios";
-import Pagination from "./pagination";
+import Pagination from "./Pagination";
 
 function Movies({
   handleAddtoWatchList,
@@ -11,14 +11,6 @@ function Movies({
 }) {
   const [movies, setMovies] = useState([]);
   const [pageNo, setPageNo] = useState(1);
-  //const [search, setState] = useState();
-
- // let handleSearch = (e) => {
-   // setState(e.target.value);
-   // return  <div  className= 'h-[45vh] w-[175px] bg-center bg-cover rounded-xl hover:scale-110 duration-300 hover:cursor-pointer flex flex-col justify-between items-end m=3 shadow-md' 
-   // style={{backgroundImage:  `url(${fullPosterUrl})`,}}></div>
- // };
-
   const handlePREV = () => {
     if (pageNo == 1) {
       setPageNo(pageNo);
@@ -45,15 +37,6 @@ function Movies({
     <>
     <div className="text-center font-bold  text-2xl m-3">
         Trending Movies
-       {/*} <div className="flex justify-center my-5">
-          <input
-            type="text"
-            onChange={handleSearch}
-            value={search}
-            placeholder="Search Movies"
-            className="px-4 bg-gray-200 h-[2rem] w-[18rem] outline-none rounded-xl"
-          />
-        </div>*/}
         
         <Pagination
           pageNo={pageNo}
